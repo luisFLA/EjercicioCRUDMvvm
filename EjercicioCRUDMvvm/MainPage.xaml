@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:EjercicioCRUDMvvm.Views"
+             x:Class="EjercicioCRUDMvvm.MainPage">
+
+    <StackLayout Padding="10">
+        <Entry x:Name="nombreEntry" Placeholder="Nombre" />
+        <Entry x:Name="direccionEntry" Placeholder="Dirección" />
+        <Entry x:Name="telefonoEntry" Placeholder="Teléfono" />
+        <Entry x:Name="correoEntry" Placeholder="Correo" />
+
+        <Button Text="Guardar Proveedor" Clicked="OnSaveProveedorClicked" />
+
+        <ListView x:Name="proveedoresListView" ItemsSource="{Binding Proveedores}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nombre}" Detail="{Binding Direccion}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

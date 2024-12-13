@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:EjercicioCRUDMvvm.Views"
+             x:Class="EjercicioCRUDMvvm.Views.MainPage">
+
+    <VerticalStackLayout Spacing="25" Padding="30">
+        <Label Text="Bienvenido a la Aplicación de Proveedores" 
+               FontSize="32" 
+               HorizontalOptions="Center" />
+        <Button Text="Ver Proveedores"
+                Command="{Binding VerProveedoresCommand}"
+                HorizontalOptions="Center" />
+        <Button Text="Agregar Proveedor"
+                Command="{Binding AgregarProveedorCommand}"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
